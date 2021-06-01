@@ -1,0 +1,96 @@
+body{
+  background-color:#FFFFFF;
+  font-family: Lato,sans-serif;
+  font-size: 16px; /*sets the font size to 16px*/
+  font-weight: 300;  /*sets the font weight to 300*/
+  line-height: 1.6;  /*sets the line height to 16px*/
+  color: #4a4a4a; /*sets the font color to Charcoal, RGB(74,74,74)*/
+}
+
+h1, h2, h3, h4,h5,h6 {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+img{
+  width:100%;
+}
+
+a {
+  color: #ff7f50; /*text colour to orange*/
+  text-decoration: none; /* No underlining */
+}
+
+a:visited { /* visited link. visited must come before hover */
+  color: #ff7f50;
+}
+
+a:hover, /*hover must come before active*/
+a:focus {
+  color: #cc6540;/*changes the colour to a shade of red-orange when link is hovered*/
+  text-decoration: underline;
+}
+
+a:active { /* selected link */
+  color: #994c30;
+}
+
+.button{
+  display: inline-block;
+  background-color: #fb8500;
+  color: #ffffff;
+  font-weight: 500;
+  padding:10px;
+  border-radius: 3px;
+  border-bottom: 2.5px solid #994c30;
+  transition: 0.2s opacity;
+}
+
+.button:hover{
+  opacity: 0.8s; /*Reduces the opacity to 80%*/
+  text-decoration: none; /*Removes text decorations on the a link with class called button*/
+  background-color: #ffffff;
+  color:#fb8500;
+  border: 2px solid #fb8500;
+}
+
+.button:active{
+  color: #ffffff;
+  border-color: #994c30;
+  background-color: #994c30;
+}
+
+.button.contact{
+  background-color: transparent;
+  color: #fb8500;
+  text-transform: uppercase;
+  border: 2px solid #fb8500;
+}
+
+.button.contact:hover{
+  background-color: #fb8500;
+  color: #ffffff;
+}
+
+.button.contact:active{
+  background-color: #994c30;
+  color: #ffffff;
+}
