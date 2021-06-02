@@ -1,21 +1,24 @@
+@charset "UTF-8"; <!--CSS encoding-->
+
 * {
   box-sizing: border-box;
 }
 
 header {
-  background-color: #ffe4c4;
+  background-color: #efefef;
   padding: 10px 0;
   margin: 0 10px;
   text-align: center;
   position: relative;
-  webkit-box-shadow: 0px 5px 1px -2px rgba(50, 50, 50, 0.75);
-  moz-box-shadow:    0px 5px 1px -2px rgba(50, 50, 50, 0.75);
-  box-shadow:         0px 5px 1px -2px rgba(50, 50, 50, 0.75);
+  webkit-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.5);
+  moz-box-shadow:    0px 1px 3px 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         0px 1px 3px 0px rgba(50, 50, 50, 0.5); /*adding shadows to the header section*/
+  width: 100%;
 }
 
 body{
-  background-color:#FFFFFF;
-  font-family: Lato,sans-serif;
+  background-color:#ffffff;
+  font-family: Asap,sans-serif;
   font-size: 16px; /*sets the font size to 16px*/
   font-weight: 300;  /*sets the font weight to 300*/
   line-height: 1.6;  /*sets the line height to 16px*/
@@ -38,7 +41,7 @@ h2 {
 
 h3 {
   font-size: 1.75em;
-  font-weight: 400;
+  font-weight: 700;
 }
 h4 {
   font-size: 1.35em;
@@ -110,11 +113,6 @@ a:active { /* selected link */
   color: #ffffff;
 }
 
-.socialicons{
-  width:100%;
-
-}
-
 /*Layout styling*/
 
 .container {
@@ -124,13 +122,13 @@ a:active { /* selected link */
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
 
-#work,.row { padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
+#work,.row { padding-bottom: 15px;
+  border-bottom: .0125em solid #4a4a4a;
 }
 
 #hero {
   text-align: center;
-  background-color: #ffe4c4;
+  background-color: #ffffff;
   padding: 10px 0;
   margin: 0 10px;
   display: inline-block;
@@ -140,7 +138,6 @@ a:active { /* selected link */
 
 .logo{
   max-width: 150px;
-  float: left;
 }
 
 nav{
@@ -178,3 +175,24 @@ nav > ul > li > a:focus {
 nav > ul > li > a:active { /* selected link */
   color: #994c30;
 }
+
+.socialicons{/*Styling the social media link icons*/
+  max-width:100%;
+  padding: 10px;
+  margin: 10px;
+  align-items: center;
+}
+
+#contact{
+  background-color: #efefef;
+}
+
+
+
+
+
+
+/*#fb8500 Orange colour for CTA buttons
+  #efefef lightgrey colour for background
+  #4a4a4a charcoal colour for header background
+  #ffffff white colour for body background*/
