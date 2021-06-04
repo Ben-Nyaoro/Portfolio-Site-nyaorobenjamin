@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Benjamin Nyaoro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="img\icons\favicon.png" rel="shortcut icon">
+    <link href="img\icons\sitelogo\favicon.png" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,24 +29,22 @@
   </header>  <!--end of header section-->
 
     <main><!--Start of main section-->
-      <div><!--this is the whole section block of the main section-->
-        <div> <!--Container wrapper for the header section-->
+      <div class="container"><!--this is the whole section block of the main section-->
+        <div> <!--start of container wrapper for the header section-->
           <h1>About</h1>
-        </div>
-
-        <div> <!--start of image container-->
+        </div> <!--end container wrapper for the header section-->
+      </div>
+      <div class="row"> <!--start of row container-->
+        <div class="img-left"> <!--start of image container-->
           <picture>
             <source srcset="img\icons\BenjaminNyaoroPicsmall.png" media="(max-width:767px)">
               <img src="img\icons\BenjaminNyaoroPiclarge.png" alt="My Picture" />
           </picture>
         </div> <!--end of image container-->
-
-        <div><!--start of my story container heading-->
+    <div> <!--start of my story, skills&tools container-->
+      <div class="container"><!--start of my story container heading-->
+        <div class="details"> <!--start of details-->
           <h2>My Story</h2>
-        </div><!--end of my story container heading-->
-
-  <div> <!--start of my story, skills&tools container-->
-        <div> <!--start My story section-->
             <p> <!--start of inro paragraph-->
               Hi! I’m a User Experience Designer based in Frankfurt Main, Germany.
             </p><!--end of inro paragraph-->
@@ -62,19 +60,30 @@
             <p> <!--start of third paragraph-->
               My training experience has taught me to always look at things from a learning & delivery point of view while my accounting and auditing backgrounds have taught me to be methodical, keen and attentive to details in all my undertakings. I enjoy using UX Design skills to create simple and articulate learning solutions that enhance the quality and delivery of learning. After working in Fintech company training, designing and implementing digital learning programmes, improving and testing product designs, I felt attracted to this field and it felt natural to move into Learning experience design. Combining my experience in training, accounting and auditing with User Experience (UX) Design skills, I enjoy creating simple, satisfying and learner centered learning experiences and solutions.
             </p><!--end of third paragraph-->
-        </div><!--end My story section-->
-
-        <div> <!--start of link to CV-->
+          </div> <!--end of details-->
+        </div><!--end of my story container heading-->
+      </div> <!--end of my story, skills&tools container-->
+        <div class="container"> <!--start of link to CV-->
 
           <a href="files\cv_nyaorobenjamin.pdf" target="_blank" class="button">View My CV here</a>
 
         </div><!--end of link to CV-->
+  </div> <!--end of row container-->
 
-        <div><!--start of skills & tools container heading-->
+        <div id="skillstools"><!--start of skills & tools container heading-->
             <h2>Skills and Tools</h2>
         </div><!--end of skills & tools container heading-->
+    <div clas="row"> <!--Start of row containing relevant skills and tools I use-->
 
-      <div><!--start of relevant skills container heading-->
+
+      <div class="img-right"> <!--start of row 1 on the left contaning the project image-->
+        <picture>
+          <source srcset="http://via.placeholder.com/600x400" media="(max-width:767px)">
+          <img src="http://via.placeholder.com/1200x800" alt="My Image">
+        </picture>
+      </div>
+
+      <div id="skills"> <!--start of relevant skills container heading-->
             <h3>Relevant Skills</h3>
         <ul>
           <li>Learning Management System (LMS) audit</li>
@@ -85,10 +94,7 @@
           <li>User Flows & Journeys</li>
         </ul>
       </div><!--end of relevant skills container heading-->
-
-        <div> <!--start of tools I use container heading-->
-
-          <div>
+        <div id="tools"> <!--start of tools I use container heading-->
             <h3>Tools I use</h3>
             <ul>
               <li>Adobe XD, Illustrator, Photoshop</li>
@@ -97,10 +103,11 @@
               <li>Balsamiq</li>
               <li>Invision</li>
             </ul>
-          </div><!--start of tools I use container heading-->
-        </div><!--end of tools I use container heading-->
-      </div>
-    </main>
+          </div><!--end of tools I use container heading-->
+      </div> <!--end of row containing relevant skills and tools I use-->
+    </div> <!--end of my story, skills&tools container-->
+  </div> <!--this is the whole section block of the main section-->
+</main>
 
     <!--start of footer section-->
 
@@ -147,7 +154,7 @@
                 <path style=" stroke:none;fill-rule:evenodd;fill:rgb(30.588235%,74.509804%,92.941176%);fill-opacity:1;" d="M 3.074219 0 L 28.839844 0 C 30.539062 0 31.914062 1.375 31.914062 3.074219 L 31.914062 28.839844 C 31.914062 30.539062 30.539062 31.914062 28.839844 31.914062 L 3.074219 31.914062 C 1.375 31.914062 0 30.539062 0 28.839844 L 0 3.074219 C 0 1.375 1.375 0 3.074219 0 Z M 3.074219 0 "/>
                 <path style=" stroke:none;fill-rule:evenodd;fill:rgb(99.607843%,99.607843%,99.607843%);fill-opacity:1;" d="M 26.015625 9.808594 C 25.265625 10.140625 24.433594 10.304688 23.605469 10.472656 C 24.519531 9.890625 25.183594 9.140625 25.433594 8.144531 C 24.683594 8.644531 23.769531 8.976562 22.855469 9.140625 C 22.109375 8.394531 21.027344 7.894531 19.78125 7.894531 C 17.535156 7.894531 15.707031 9.722656 15.707031 11.96875 C 15.707031 12.300781 15.707031 12.550781 15.792969 12.882812 C 12.382812 12.714844 9.308594 11.054688 7.3125 8.644531 C 6.898438 9.226562 6.730469 9.890625 6.730469 10.636719 C 6.730469 12.050781 7.480469 13.296875 8.558594 14.046875 C 7.894531 14.046875 7.230469 13.878906 6.648438 13.546875 C 6.648438 13.546875 6.648438 13.546875 6.648438 13.628906 C 6.648438 14.128906 6.816406 14.628906 6.980469 15.042969 C 7.480469 16.375 8.644531 17.289062 9.972656 17.621094 C 9.640625 17.703125 9.308594 17.703125 8.894531 17.703125 C 8.644531 17.703125 8.394531 17.703125 8.144531 17.621094 C 8.644531 19.28125 10.222656 20.445312 11.96875 20.445312 C 10.554688 21.609375 8.808594 22.191406 6.898438 22.191406 C 6.484375 22.191406 6.234375 22.191406 5.902344 22.191406 C 7.730469 23.355469 9.890625 24.019531 12.21875 24.019531 C 18.699219 24.019531 22.605469 19.53125 23.6875 14.878906 C 23.851562 14.046875 23.9375 13.214844 23.9375 12.382812 C 23.9375 12.21875 23.9375 12.050781 23.9375 11.886719 C 24.765625 11.304688 25.433594 10.636719 26.015625 9.808594 Z M 26.015625 9.808594 "/>
                 </g></svg>
-                
+
           </a><!--end of twitter link-->
         </div> <!--end of social media links-->
       </div> <!--end main container wrapper-->
@@ -160,7 +167,6 @@
       </div>
 
     </footer>
-
 </body>
 
 </html>

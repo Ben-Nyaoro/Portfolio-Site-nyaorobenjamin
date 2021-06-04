@@ -5,9 +5,9 @@
 }
 
 header {
-  background-color: #efefef;
+  background-color: #fcfcfc;
   padding: 10px 0;
-  margin: 0 10px;
+  margin: 0;
   text-align: center;
   position: relative;
   webkit-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.5);
@@ -77,9 +77,10 @@ a:active { /* selected link */
   color: #ffffff;
   font-weight: 500;
   padding:10px;
-  border-radius: 3px;
+  border-radius: 5px;
   border-bottom: 2.5px solid #994c30;
   transition: 0.2s opacity;
+  align-items:flex-end;
 }
 
 .button:hover{
@@ -97,7 +98,7 @@ a:active { /* selected link */
 }
 
 .button.contact{
-  background-color: transparent;
+  background-color: white;
   color: #fb8500;
   text-transform: uppercase;
   border: 2px solid #fb8500;
@@ -121,9 +122,23 @@ a:active { /* selected link */
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
+.wordguru{
+  background-color: #023047;
+  color: #ffffff;
+}
+.skillmaster{
+  background-color: #015250;
+  color: #ffffff;
+}
+.waveaccounting{
+  background-color: #007197;
+  color: #ffffff;
+}
 
-#work,.row { padding-bottom: 15px;
+#work, .row { padding-bottom: 15px;
   border-bottom: .0125em solid #4a4a4a;
+  text-align: center;
+  position: relative;
 }
 
 #hero {
@@ -133,7 +148,10 @@ a:active { /* selected link */
   margin: 0 10px;
   display: inline-block;
   width: 100%;
+}
 
+#hero span{
+  display: block;
 }
 
 .logo{
@@ -176,15 +194,97 @@ nav > ul > li > a:active { /* selected link */
   color: #994c30;
 }
 
+ul{
+  text-align: left;
+}
 .socialicons{/*Styling the social media link icons*/
   max-width:100%;
   padding: 10px;
   margin: 10px;
-  align-items: center;
 }
 
 #contact{
   background-color: #efefef;
+
+}
+
+
+/*Start of media queries*/
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+.img-left{
+  float: left;
+  padding: 20px;
+  margin: 20px;
+  width: 50%;
+}
+#skillstools{
+  text-align: center;
+}
+
+#skills{
+  padding: 0;
+  margin: 20px;
+  width: 50%;
+}
+
+#tools{
+  padding: 0;
+  margin: 20px;
+  width: 50%;
+}
+} /*end of media queries*/
+
+.img-right{
+  float: right;
+  padding: 20px;
+  width: 50%;
+}
+
+.row::after {/*“clear” the flow*/
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#tools::after {/*“clear” the flow*/
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
 }
 
 
