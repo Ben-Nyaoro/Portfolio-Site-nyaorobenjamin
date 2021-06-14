@@ -13,7 +13,7 @@ header {
   webkit-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.5);
   moz-box-shadow:    0px 1px 3px 0px rgba(50, 50, 50, 0.5);
   box-shadow:         0px 1px 3px 0px rgba(50, 50, 50, 0.5); /*adding shadows to the header section*/
-  width: 100%;
+  max-width:100%;
 }
 
 body{
@@ -48,10 +48,6 @@ h4 {
   font-weight: 400;
 }
 
-img{
-  width:100%;
-}
-
 a {
   color: #ff7f50; /*text colour to orange*/
   text-decoration: none; /* No underlining */
@@ -71,30 +67,36 @@ a:active { /* selected link */
   color: #994c30;
 }
 
+ul>li{
+  text-align: left;
+}
+
 .button{
   display: inline-block;
-  background-color: #fb8500;
   color: #ffffff;
+  background-color: #fb8500;
   font-weight: 500;
   padding:10px;
   border-radius: 5px;
   border-bottom: 2.5px solid #994c30;
-  transition: 0.2s opacity;
-  align-items:flex-end;
+  transition: 0.2s opacity.0.2s;
+  transition-property: opacity;
 }
 
 .button:hover{
   opacity: 0.8s; /*Reduces the opacity to 80%*/
-  text-decoration: none; /*Removes text decorations on the a link with class called button*/
   background-color: #ffffff;
   color:#fb8500;
   border: 2px solid #fb8500;
+  font-size:18px;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .button:active{
   color: #ffffff;
   border-color: #994c30;
-  background-color: #994c30;
+  background-color: #fb8500;
 }
 
 .button.contact{
@@ -102,25 +104,36 @@ a:active { /* selected link */
   color: #fb8500;
   text-transform: uppercase;
   border: 2px solid #fb8500;
+  max-width: 15%;
 }
 
 .button.contact:hover{
   background-color: #fb8500;
+  text-decoration: none;
   color: #ffffff;
 }
 
 .button.contact:active{
-  background-color: #994c30;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #fb8500;
 }
 
 /*Layout styling*/
 
 .container {
   padding: 0 15px;
+  margin-left: 2px;
+  margin-right: auto;
+}
+
+.details{
+  text-align: left;
+  margin: 1em;
+  padding:1em 0;
 }
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  max-width: 1200px;
 }
 .wordguru{
   background-color: #023047;
@@ -133,6 +146,7 @@ a:active { /* selected link */
 .waveaccounting{
   background-color: #007197;
   color: #ffffff;
+  max-height: inherit;
 }
 
 #work, .row { padding-bottom: 15px;
@@ -167,6 +181,7 @@ nav> ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 
 nav> ul> li{
@@ -186,17 +201,15 @@ nav > ul > li > a:visited { /* visited link. visited must come before hover */
 
 nav > ul > li > a:hover, /*hover must come before active*/
 nav > ul > li > a:focus {
-  color: #cc6540;/*changes the colour to a shade of red-orange when link is hovered*/
-  text-decoration: underline;
+  color: #ff7f50;/*changes the colour to a shade of red-orange when link is hovered*/
+  text-decoration: none;
 }
 
 nav > ul > li > a:active { /* selected link */
   color: #994c30;
 }
 
-ul{
-  text-align: left;
-}
+
 .socialicons{/*Styling the social media link icons*/
   max-width:100%;
   padding: 10px;
@@ -205,9 +218,53 @@ ul{
 
 #contact{
   background-color: #efefef;
-
 }
 
+.animation{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+/*adding animations to CSS*/
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+.sun {/*Animating the sun*/
+  animation-name: color-change;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation-name: cloud-move;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation-name: cloud-move-reverse;
+  animation-duration: 34s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
 
 /*Start of media queries*/
 
@@ -232,6 +289,19 @@ nav {
   margin: 20px;
   width: 50%;
 }
+
+.img-right{
+  float: right;
+  padding: 20px;
+  width: 50%;
+}
+
+.skillsimg{
+float:right;
+margin: 20px;
+padding: 20px;
+  }
+
 #skillstools{
   text-align: center;
 }
@@ -249,11 +319,6 @@ nav {
 }
 } /*end of media queries*/
 
-.img-right{
-  float: right;
-  padding: 20px;
-  width: 50%;
-}
 
 .row::after {/*“clear” the flow*/
   content: "";
@@ -267,8 +332,10 @@ nav {
   display: table;
 }
 
-
+.contact{
+  width: 50%;
 }
+
 
 /* ==============================
 Large devices (1024px or larger)
